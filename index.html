@@ -17,7 +17,7 @@
     
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #f5f5f5;
             padding: 20px;
         }
@@ -89,7 +89,7 @@
               id: 'first-plus',
               title: 'First Class (A+)',
               range: '85-100%',
-              color: 'bg-blue-800',
+              color: 'bg-green-700',
               textColor: 'text-white',
               qualities: [
                 { title: 'Research', description: 'Exceptional evidence of research skills with a comprehensive range of evidence' },
@@ -104,7 +104,7 @@
               id: 'first',
               title: 'First Class (A)',
               range: '70-84%',
-              color: 'bg-blue-600',
+              color: 'bg-green-600',
               textColor: 'text-white',
               qualities: [
                 { title: 'Research', description: 'Excellent and detailed understanding with strong evidence and critical analysis' },
@@ -119,8 +119,8 @@
               id: 'upper-second',
               title: 'Upper Second (B)',
               range: '60-69%',
-              color: 'bg-blue-400',
-              textColor: 'text-black',
+              color: 'bg-green-500',
+              textColor: 'text-white',
               qualities: [
                 { title: 'Research', description: 'Good knowledge and understanding with solid research skills' },
                 { title: 'Design Development', description: 'Good ability to analyze ideas and concepts critically' },
@@ -134,7 +134,7 @@
               id: 'lower-second',
               title: 'Lower Second (C)',
               range: '50-59%',
-              color: 'bg-blue-200',
+              color: 'bg-yellow-400',
               textColor: 'text-black',
               qualities: [
                 { title: 'Research', description: 'Some knowledge and understanding, may be limited in scope' },
@@ -149,7 +149,7 @@
               id: 'third',
               title: 'Third Class (D)',
               range: '40-49%',
-              color: 'bg-blue-100',
+              color: 'bg-yellow-500',
               textColor: 'text-black',
               qualities: [
                 { title: 'Research', description: 'Basic knowledge and understanding of required skills and practices' },
@@ -164,7 +164,7 @@
               id: 'marginal-fail',
               title: 'Marginal Fail (FM)',
               range: '35-39%',
-              color: 'bg-red-200',
+              color: 'bg-amber-500',
               textColor: 'text-black',
               qualities: [
                 { title: 'Research', description: 'Limited knowledge and understanding of required skills and practices' },
@@ -179,7 +179,7 @@
               id: 'fail',
               title: 'Fail (F)',
               range: '0-34%',
-              color: 'bg-red-400',
+              color: 'bg-red-600',
               textColor: 'text-white',
               qualities: [
                 { title: 'Research', description: 'Little knowledge or understanding of required skills and practices' },
@@ -202,13 +202,13 @@
                 Click on each grade band to understand what tutors are looking for when assessing your work. This will help you aim for higher grades by understanding the key differences between each level.
               </p>
               
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-6 justify-center">
                 {grades.map(grade => (
                   <button
                     key={grade.id}
                     className={`px-4 py-2 rounded-md font-medium transition-all ${
                       activeGrade === grade.id ? 
-                      `${grade.color} ${grade.textColor} ring-2 ring-offset-2 ring-blue-500` : 
+                      `${grade.color} ${grade.textColor} ring-2 ring-offset-2 ring-gray-400` : 
                       'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                     onClick={() => setActiveGrade(grade.id)}
