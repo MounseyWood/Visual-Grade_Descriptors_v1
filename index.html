@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BA Fashion - Visual Grade Descriptors Guide</title>
+    <title>BA (Hons) Fashion - Visual Grade Descriptors Guide</title>
     
     <!-- Load React -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
@@ -17,31 +17,48 @@
     
     <style>
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            padding: 0;
+            margin: 0;
+            color: #333;
+        }
+        
+        .ku-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
+        }
+        
+        .ku-content {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
         }
         
         .header {
             text-align: center;
             margin-bottom: 30px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #aaaaaa;
+            padding-bottom: 20px;
         }
         
-        .header h1 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 10px;
+        .ku-button {
+            display: inline-block;
+            background-color: #FFF200;
+            color: #000;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 0;
+            text-decoration: none;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
         }
         
-        .header p {
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.5;
+        .ku-button:hover {
+            background-color: #FFF200;
         }
         
         .footer {
@@ -50,34 +67,52 @@
             padding: 20px;
             color: #666;
             font-size: 0.9rem;
+            border-top: 1px solid #eee;
         }
         
-        /* Kingston School of Art branding */
-        .ksa-yellow {
-            background-color: #FFE800;
+        /* Table styling from KU Canvas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
         
-        .ksa-text {
-            color: #FFE800;
+        th {
+            background-color: #f1f1f1;
+            text-align: left;
+            padding: 12px;
+            border: 1px solid #ddd;
         }
         
-        .ksa-border {
-            border-color: #FFE800;
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+        
+        caption {
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Kingston School of Art</h1>
-        <h2 class="text-xl mb-4">BA Fashion - Understanding Grade Descriptors</h2>
-        <p>This interactive guide helps you understand the grade descriptors used to assess your work in the Fashion BA program. Select different grade bands to see what tutors look for and how to aim for higher grades.</p>
-    </div>
-    
-    <div id="grade-descriptors-app"></div>
-    
-    <div class="footer">
-        <p>Kingston School of Art - BA Fashion Program - Assessment Knowledge Base</p>
-        <p>© 2025 Kingston University</p>
+    <div class="ku-content-wrapper">
+        <div class="ku-content">
+            <div class="header">
+                <img src="KSA_secondary_lock-up.png" alt="Kingston School of Art Logo" class="h-6 mb-4 mx-auto block">
+                <h1 class="text-2xl font-bold mb-4">Understanding Grade Descriptors</h1>
+                <p>This interactive guide aims to help you understand the grade descriptors used to assess your work on the BA (Hons) Fashion program. Click on each grade band to see what tutors look for, and to understand the key differences between grade bands. This will help you in your efforts to achieve higher grades, through identifying specific areas for improvement.</p>
+            </div>
+            
+            <div id="grade-descriptors-app"></div>
+        </div>
+        
+        <div class="footer">
+            <p>Kingston School of Art - BA (Hons) Fashion Program - Learning Outcomes, Feedback and Assessment Knowledge Base</p>
+            <p>© 2025 Kingston University</p>
+        </div>
     </div>
     
     <script type="text/babel">
@@ -89,8 +124,8 @@
               id: 'first-plus',
               title: 'First Class (A+)',
               range: '85-100%',
-              color: 'bg-green-700',
-              textColor: 'text-white',
+              color: 'bg-[#00FF00]',
+              textColor: 'text-black',
               qualities: [
                 { title: 'Research', description: 'Exceptional evidence of research skills with a comprehensive range of evidence' },
                 { title: 'Design Development', description: 'Outstanding level of study that goes beyond the ideas and practices studied' },
@@ -104,8 +139,8 @@
               id: 'first',
               title: 'First Class (A)',
               range: '70-84%',
-              color: 'bg-green-600',
-              textColor: 'text-white',
+              color: 'bg-[#7FFF00]',
+              textColor: 'text-black',
               qualities: [
                 { title: 'Research', description: 'Excellent and detailed understanding with strong evidence and critical analysis' },
                 { title: 'Design Development', description: 'Excellent level of study with creative and critical response to content' },
@@ -119,8 +154,8 @@
               id: 'upper-second',
               title: 'Upper Second (B)',
               range: '60-69%',
-              color: 'bg-green-500',
-              textColor: 'text-white',
+              color: 'bg-[#FFFF00]',
+              textColor: 'text-black',
               qualities: [
                 { title: 'Research', description: 'Good knowledge and understanding with solid research skills' },
                 { title: 'Design Development', description: 'Good ability to analyze ideas and concepts critically' },
@@ -134,7 +169,7 @@
               id: 'lower-second',
               title: 'Lower Second (C)',
               range: '50-59%',
-              color: 'bg-yellow-400',
+              color: 'bg-[#FFD700]',
               textColor: 'text-black',
               qualities: [
                 { title: 'Research', description: 'Some knowledge and understanding, may be limited in scope' },
@@ -149,7 +184,7 @@
               id: 'third',
               title: 'Third Class (D)',
               range: '40-49%',
-              color: 'bg-yellow-500',
+              color: 'bg-[#FFA500]',
               textColor: 'text-black',
               qualities: [
                 { title: 'Research', description: 'Basic knowledge and understanding of required skills and practices' },
@@ -164,8 +199,8 @@
               id: 'marginal-fail',
               title: 'Marginal Fail (FM)',
               range: '35-39%',
-              color: 'bg-amber-500',
-              textColor: 'text-black',
+              color: 'bg-[#FF4500]',
+              textColor: 'text-white',
               qualities: [
                 { title: 'Research', description: 'Limited knowledge and understanding of required skills and practices' },
                 { title: 'Design Development', description: 'Descriptive with little attempt to analyze or develop ideas' },
@@ -179,7 +214,7 @@
               id: 'fail',
               title: 'Fail (F)',
               range: '0-34%',
-              color: 'bg-red-600',
+              color: 'bg-[#FF0000]',
               textColor: 'text-white',
               qualities: [
                 { title: 'Research', description: 'Little knowledge or understanding of required skills and practices' },
@@ -195,31 +230,24 @@
           const activeGradeData = grades.find(grade => grade.id === activeGrade);
           
           return (
-            <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold mb-6 text-center">Understanding Fashion Design Grade Descriptors</h2>
-              
-              <p className="mb-6 text-gray-700">
-                Click on each grade band to understand what tutors are looking for when assessing your work. This will help you aim for higher grades by understanding the key differences between each level.
-              </p>
-              
+            <div className="max-w-4xl mx-auto p-0">
               <div className="flex flex-wrap gap-2 mb-6 justify-center">
                 {grades.map(grade => (
                   <button
                     key={grade.id}
-                    className={`px-4 py-2 rounded-md font-medium transition-all ${
+                    className={`px-4 py-2 rounded-none font-medium transition-all ${
                       activeGrade === grade.id ? 
                       `${grade.color} ${grade.textColor} ring-2 ring-offset-2 ring-gray-400` : 
                       'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                     onClick={() => setActiveGrade(grade.id)}
                   >
-                    {grade.title}
-                    <span className="block text-sm font-normal">{grade.range}</span>
+                    {grade.range}
                   </button>
                 ))}
               </div>
               
-              <div className={`${activeGradeData.color} ${activeGradeData.textColor} p-6 rounded-lg mb-6`}>
+              <div className={`${activeGradeData.color} ${activeGradeData.textColor} p-6 rounded-none mb-6`}>
                 <h2 className="text-xl font-bold mb-2">{activeGradeData.title} ({activeGradeData.range})</h2>
                 <p className="text-lg mb-4">Overall Quality: {
                   activeGrade === 'first-plus' ? 'Outstanding' :
@@ -231,16 +259,21 @@
                 }</p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {activeGradeData.qualities.map((quality, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
-                    <h3 className="font-bold mb-2">{quality.title}</h3>
-                    <p className="text-gray-700">{quality.description}</p>
-                  </div>
-                ))}
-              </div>
+              <table>
+                <caption>
+                  <h3 className="text-xl font-bold mb-2">Assessment Criteria</h3>
+                </caption>
+                <tbody>
+                  {activeGradeData.qualities.map((quality, index) => (
+                    <tr key={index}>
+                      <th style={{width: "25%"}}>{quality.title}</th>
+                      <td>{quality.description}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
               
-              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+              <div className="mt-6 p-4 bg-gray-50 rounded-none border border-gray-200">
                 <h3 className="font-bold mb-2">How to move up to the next grade band:</h3>
                 <ul className="list-disc pl-5 space-y-2">
                   {activeGrade === 'fail' && (
@@ -305,8 +338,14 @@
                 </ul>
               </div>
               
-              <div className="mt-6 text-sm text-gray-500">
-                <p>Note: This is a visual interpretation of the Kingston School of Art Fashion BA grade descriptors. Always refer to the official grade descriptors in your course handbook for definitive guidance.</p>
+              <div className="mt-6 p-3 bg-gray-100 border-l-4 border-[#FFF200] text-sm text-gray-700">
+                <p>Note: This is a visual interpretation of the Kingston School of Art BA (Hons) Fashion grade descriptors. Always refer to the official grade descriptors in your course handbook for definitive guidance, a link can be found below.</p>
+              </div>
+              
+              <div className="mt-6">
+                <a className="ku-button" href="https://canvas.kingston.ac.uk/courses/32501/pages/full-grade-descriptors" target="_blank">Access full Grade Descriptors</a>
+                <a className="ku-button ml-4" href="https://canvas.kingston.ac.uk/courses/32501" title="Back to Module Home Page">Back to Module Home Page</a>
+                <a className="ku-button ml-4" href="https://canvas.kingston.ac.uk/courses/8255/pages/7-fairness-in-assessment" target="_blank">Fairness in Assessment</a>
               </div>
             </div>
           );
